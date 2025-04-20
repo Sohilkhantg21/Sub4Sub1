@@ -21,10 +21,12 @@ $otherUsers = array_filter($users, fn($u) => $u['channel'] !== $channel);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Submitted</title>
+    <title>Submitted - YouTube Sub4Sub</title>
+    <link rel="icon" href="https://www.youtube.com/s/desktop/6e84842b/img/favicon.ico">
     <style>
         body {
-            background: #f2f2f2;
+            background: #000;
+            color: white;
             margin: 0;
             font-family: Arial, sans-serif;
         }
@@ -36,21 +38,32 @@ $otherUsers = array_filter($users, fn($u) => $u['channel'] !== $channel);
         }
         .box {
             background: #fff;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 40px;
+            border-radius: 15px;
             text-align: center;
             width: 90%;
-            max-width: 500px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            max-width: 450px;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+        }
+        .box h2 {
+            color: #c4302b;
+        }
+        .box p {
+            color: #333;
+            font-size: 16px;
         }
         .button {
             margin-top: 20px;
             display: inline-block;
-            background: #28a745;
+            background: #c4302b;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 25px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background: #a62622;
         }
     </style>
 </head>
