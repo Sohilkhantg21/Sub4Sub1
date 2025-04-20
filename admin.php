@@ -5,39 +5,53 @@ $users = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Panel</title>
+    <title>Admin Panel - Sub4Sub</title>
+    <link rel="icon" href="https://www.youtube.com/s/desktop/6e84842b/img/favicon.ico">
     <style>
         body {
             margin: 0;
-            background: #f2f2f2;
+            background: #000;
             font-family: Arial, sans-serif;
+            color: white;
         }
         .container {
             padding: 30px;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
         h2 {
             text-align: center;
-            margin-bottom: 30px;
+            color: #c4302b;
         }
         table {
             width: 100%;
             background: #fff;
+            color: black;
             border-collapse: collapse;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
         }
         th, td {
             padding: 12px 15px;
             text-align: left;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #ddd;
         }
         th {
-            background-color: #007bff;
+            background-color: #c4302b;
             color: white;
         }
         a {
-            color: #007bff;
+            color: #c4302b;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .no-data {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -45,7 +59,7 @@ $users = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
 <div class="container">
     <h2>Admin Panel - User Submissions</h2>
     <?php if (count($users) === 0): ?>
-        <p>No users yet.</p>
+        <p class="no-data">No users yet.</p>
     <?php else: ?>
         <table>
             <thead>
